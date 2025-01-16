@@ -1,18 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-export const content = ["./src/**/*.{html,js}"];
+export const content = ["./src/**/*.{html,js}", "./src/**/*.css"];
 export const theme = {
   extend: {
     colors: {
-      primary: "#1a73e8",
-      secondary: "#404040",
+      primary: "#020024",
+      secondary: "#0a0744",
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
     },
     animation: {
+      "loading-bar": "loadingBar 2s linear",
       "fade-in": "fadeIn 1s ease-out",
       "slide-in": "slideIn 0.5s ease-out",
-      "pulse": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
     },
     keyframes: {
       fadeIn: {
@@ -27,6 +28,9 @@ export const theme = {
         "0%, 100%": { opacity: "1" },
         "50%": { opacity: ".5" },
       },
+      loadingBar: {
+        from: { width: "0%" }
+      }
     },
   },
 };

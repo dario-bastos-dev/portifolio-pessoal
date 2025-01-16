@@ -2,3 +2,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-block bg-[#020024] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#0a0744] transition duration-300 ease-in-out transform hover:-translate-y-1 uppercase;
+  }
+
+  .exp {
+    &:hover {
+      @apply transition duration-300 ease-in-out bg-[#020024]  rounded-lg shadow-lg -translate-y-1 cursor-default;
+
+      span:nth-child(1) {
+        @apply text-white;
+      }
+      span:nth-child(2) {
+        @apply text-gray-300;
+      }
+    }
+  }
+
+  .filter {
+    &.active {
+      @apply m-2 px-4 py-2 bg-[#020024] text-white rounded-full hover:bg-[#0a0744] focus:outline-none focus:ring-2 focus:ring-[#060081] focus:ring-opacity-50 transition duration-300;
+    }
+
+    &.inactive {
+      @apply m-2 px-4 py-2 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 transition duration-300;
+    }
+  }
+
+  .proj {
+    @apply inline-block bg-[#020024] text-white font-semibold py-2 px-4 rounded hover:bg-[#0a0744] transition duration-300;
+  }
+}
+
+@layer base {
+  h2,
+  h3 {
+    @apply text-[#020024];
+  }
+
+  a.nav-btn {
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #020024;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+    &:hover::before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+
+  div.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & .carousel-btn {
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      color: black;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 8px;
+
+      & .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &.active {
+          background: var(--color-light);
+        }
+      }
+    }
+  }
+}

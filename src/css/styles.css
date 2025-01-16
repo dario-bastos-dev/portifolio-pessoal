@@ -1,0 +1,35 @@
+/* Adicione isso ao seu arquivo CSS existente */
+.projects-carousel {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.project-card {
+  flex: 0 0 100%;
+  
+}
+
+@media (min-width: 640px) {
+  .project-card {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-card {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+.carousel-nav {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .carousel-nav {
+    display: block;
+  }
+}

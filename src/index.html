@@ -4,8 +4,967 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dário Bastos</title>
-    
+
+    <link
+      rel="shortcut icon"
+      href="./assets/img/Logo-favicon.svg"
+      type="image/x-icon"
+    />
+
     <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
   </head>
-  <body></body>
+  <body>
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <a
+              href="#"
+              class="text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700"
+            >
+              <img
+                src="./assets/img/Logo-1.png"
+                alt="Logo"
+                class="h-12 w-auto"
+              />
+            </a>
+          </div>
+          <div class="hidden md:flex w-full items-center justify-end space-x-8">
+            <div class="w-[70%] text-center space-x-8">
+              <a href="#home" class="text-gray-800 nav-btn"> Home </a>
+              <a href="#sobre" class="text-gray-800 nav-btn"> Sobre </a>
+              <a href="#servicos" class="text-gray-800 nav-btn"> Serviços </a>
+              <a href="#projetos" class="text-gray-800 nav-btn"> Projetos </a>
+              <a href="#tecnologias" class="text-gray-800 nav-btn">
+                Tecnologias
+              </a>
+            </div>
+
+            <a href="#contato" class="btn px-4 py-2 text-base font-medium">
+              Vamos Conversar
+            </a>
+          </div>
+          <div class="md:hidden flex items-center">
+            <button class="mobile-menu-button">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="mobile-menu hidden md:hidden">
+        <a href="#contato" class="block py-2 px-4 text-sm hover:bg-gray-200">
+          Home
+        </a>
+        <a href="#sobre" class="block py-2 px-4 text-sm hover:bg-gray-200">
+          Sobre
+        </a>
+        <a href="#servicos" class="block py-2 px-4 text-sm hover:bg-gray-200">
+          Serviços
+        </a>
+        <a href="#projetos" class="block py-2 px-4 text-sm hover:bg-gray-200">
+          Projetos
+        </a>
+        <a
+          href="#tecnologias"
+          class="block py-2 px-4 text-sm hover:bg-gray-200"
+        >
+          Tecnologias
+        </a>
+
+        <a href="#contato" class="block btn px-4 py-2 text-base font-medium">
+          Vamos Conversar
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="contato" class="bg-primary pt-20 pb-12 md:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <!-- Lado Esquerdo: Conteúdo Principal -->
+          <div class="w-full md:w-1/2 mb-12 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Transformando Ideias em Realidade Digital
+            </h1>
+            <h2 class="text-xl md:text-2xl text-gray-200 mb-6">
+              Desenvolvimento Web Full Stack & Soluções Personalizadas
+            </h2>
+            <p class="text-gray-400 mb-8">
+              Especializado em criar experiências digitais únicas e poderosas,
+              combinando design intuitivo com tecnologia de ponta.
+            </p>
+            <div class="flex flex-wrap gap-4 mb-8 text-gray-100">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                alt="React"
+                class="h-10 w-10"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+                class="h-10 w-10"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg"
+                alt="Wordpress"
+                class="h-10 w-10"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+                alt="GoogleCloud"
+                class="h-10 w-10"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                alt="AWS"
+                class="h-10 w-10"
+              />
+              <!-- Adicione mais ícones conforme necessário -->
+            </div>
+          </div>
+
+          <!-- Lado Direito: Formulário de Contato -->
+          <div class="w-full md:w-5/12">
+            <form class="bg-white shadow-xl rounded-lg p-8">
+              <h3 class="text-2xl font-semibold text-center mb-6">
+                Vamos iniciar seu projeto
+              </h3>
+              <div class="mb-4">
+                <label
+                  for="name"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Nome
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Seu Nome"
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="email"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="exaple@example.com"
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="phone"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Telefone
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(00) 00000-0000"
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="project"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Tipo de Projeto
+                </label>
+                <select
+                  id="project"
+                  name="project"
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                >
+                  <option value="">Selecione uma opção</option>
+                  <option value="website">Website</option>
+                  <option value="webapp">Aplicação Web</option>
+                  <option value="ecommerce">E-commerce</option>
+                  <option value="mobile">Aplicativo Móvel</option>
+                  <option value="other">Outro</option>
+                </select>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Descrição
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Descreva o seu projeto"
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                ></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <button
+                  type="submit"
+                  class="btn font-bold rounded focus:outline-none focus:shadow-outline w-full hover:scale-105"
+                >
+                  Enviar
+                </button>
+              </div>
+              <p class="text-xs text-gray-500 mt-4">
+                Ao enviar, você concorda com nossos Termos de Serviço e Política
+                de Privacidade.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <!-- Foto Profissional -->
+          <div class="w-full md:w-1/3 mb-10 md:mb-0">
+            <div class="relative">
+              <img
+                src="./assets/img/Foto.jpg"
+                alt="Nome do Desenvolvedor"
+                class="rounded-lg shadow-2xl w-full md:w-4/5 mx-auto"
+              />
+            </div>
+          </div>
+
+          <!-- Conteúdo da Apresentação -->
+          <div class="w-full md:w-2/3 md:pl-12">
+            <h2 class="text-3xl font-bold mb-6">Sobre Mim</h2>
+            <p class="text-gray-600 mb-6 text-lg">
+              Olá! Sou Dário José, um desenvolvedor full-stack apaixonado por
+              criar soluções digitais inovadoras. Com mais de 2 anos de
+              experiência, especializo-me em transformar ideias complexas em
+              aplicações web elegantes e funcionais.
+            </p>
+            <p class="text-gray-600 mb-8 text-lg">
+              Já trabalhei com startups e empresas, ajudando-as a alcançar seus
+              objetivos através da tecnologia.
+            </p>
+
+            <!-- Conquistas e Números -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+              <div class="text-center py-2 px-4 exp">
+                <span class="block text-3xl font-bold text-primary"> 2+ </span>
+                <span class="text-sm text-gray-500"> Anos de Experiência </span>
+              </div>
+              <div class="text-center py-2 px-4 exp">
+                <span class="block text-3xl font-bold text-primary"> 30+ </span>
+                <span class="text-sm text-gray-500"> Projetos Concluídos </span>
+              </div>
+              <div class="text-center py-2 px-4 exp">
+                <span class="block text-3xl font-bold text-primary"> 20+ </span>
+                <span class="text-sm text-gray-500">
+                  Clientes Satisfeitos
+                </span>
+              </div>
+            </div>
+
+            <!-- Missão e Valores -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Minha Missão
+              </h3>
+              <p class="text-gray-600">
+                Meu objetivo é entregar soluções tecnológicas que não apenas
+                atendam às necessidades dos clientes, mas também superem suas
+                expectativas, impulsionando o crescimento e a inovação em seus
+                negócios.
+              </p>
+            </div>
+
+            <!-- CTA -->
+            <a href="#contato" class="btn"> Vamos Trabalhar Juntos </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Meus Serviços</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Ofereço soluções completas de desenvolvimento web, desde a concepção
+            até a implementação e manutenção.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Serviço 1 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-lg p-8 transition duration-300 ease-in-out transform hover:-translate-y-2"
+          >
+            <div class="text-secondary mb-4">
+              <i class="ph-bold ph-desktop text-5xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Desenvolvimento Web
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Criação de websites e aplicações web responsivas, rápidas e
+              escaláveis.
+            </p>
+            <ul class="text-sm text-gray-600 mb-6">
+              <li class="flex items-center mb-2">
+                <i class="ph-bold ph-check text-green-500 mr-2"></i>
+                Frontend moderno
+              </li>
+              <li class="flex items-center mb-2">
+                <i class="ph-bold ph-check text-green-500 mr-2"></i>
+                Backend robusto
+              </li>
+              <li class="flex items-center">
+                <i class="ph-bold ph-check text-green-500 mr-2"></i>
+                Integração de APIs
+              </li>
+            </ul>
+            <a
+              href="#contato"
+              class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded hover:bg-secondary transition duration-300"
+            >
+              Solicitar Serviço
+            </a>
+          </div>
+
+          <!-- Serviço 2 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-lg p-8 transition duration-300 ease-in-out transform hover:-translate-y-2"
+          >
+            <div class="text-secondary mb-4">
+              <i class="ph-bold ph-gear-six text-5xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Criação de Automações
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Criação de automações para aumentar a produtividade.
+            </p>
+            <ul class="text-sm text-gray-600 mb-6">
+              <li class="flex items-center mb-2">
+                <i class="ph-bold ph-check text-green-500 mr-2"></i>
+                Make
+              </li>
+              <li class="flex items-center mb-2">
+                <i class="ph-bold ph-check text-green-500 mr-2"></i>
+
+                n8n
+              </li>
+            </ul>
+            <a
+              href="#contato"
+              class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded hover:bg-secondary transition duration-300"
+            >
+              Solicitar Serviço
+            </a>
+          </div>
+
+          <!-- Serviço 3 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-lg p-8 transition duration-300 ease-in-out transform hover:-translate-y-2"
+          >
+            <div class="text-secondary mb-4">
+              <i class="ph-bold ph-chat text-5xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Criação de ChatBots
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Criação de ChatBots para realizar o atendimento.
+            </p>
+            <ul class="text-sm text-gray-600 mb-6">
+              <li class="flex items-center mb-2">
+                <i class="ph-bold ph-check text-green-500 mr-2"></i>
+                Botconversa
+              </li>
+              <li class="flex items-center mb-2">
+                <i class="ph-bold ph-check text-green-500 mr-2"></i>
+                Weni
+              </li>
+              <li class="flex items-center">
+                <i class="ph-bold ph-check text-green-500 mr-2"></i>
+                ManyChat
+              </li>
+            </ul>
+            <a
+              href="#contato"
+              class="inline-block bg-primary text-white font-semibold py-2 px-4 rounded hover:bg-secondary transition duration-300"
+            >
+              Solicitar Serviço
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA Final -->
+        <div class="text-center mt-16">
+          <a href="#contato" class="btn"> Iniciar Projeto </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projetos" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Meus Projetos</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Confira alguns dos trabalhos que já desenvolvi.
+          </p>
+        </div>
+
+        <!-- Filtros de Projetos -->
+        <div class="flex flex-wrap justify-center mb-12">
+          <button class="filter active" data-filter="all">Todos</button>
+          <button class="filter inactive" data-filter="web">Web</button>
+        </div>
+
+        <!-- Carrossel de Projetos -->
+        <div class="relative overflow-hidden w-[100%] py-4  align-center">
+          <div
+            class="projects-carousel flex transition-all duration-500 ease-out"
+          >
+            <!-- Projeto 1 -->
+            <div
+              class="bg-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 project-card"
+              data-category="web"
+            >
+              <img
+                src="./assets/img/Naturefork.jpg"
+                alt="Projeto 1"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Naturefork
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Landing page para um nutricionista esportivo.
+                </p>
+
+                <a
+                  href="https://site-nutricionista-mauve.vercel.app/"
+                  target="_blank"
+                  class="proj"
+                >
+                  Ver Detalhes
+                </a>
+              </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div
+              class="bg-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 project-card"
+              data-category="mobile"
+            >
+              <img
+                src="./assets/img/CV-Construction.jpg"
+                alt="Projeto 2"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  CV Construction
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Landing page para uma empresa de construção civil.
+                </p>
+
+                <a
+                  href="https://reformas-residenciais.vercel.app/"
+                  target="_blank"
+                  class="proj"
+                >
+                  Ver Detalhes
+                </a>
+              </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div
+              class="bg-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 project-card"
+              data-category="desktop"
+            >
+              <img
+                src="./assets/img/Julia-Fonseca.jpg"
+                alt="Projeto 3"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Nutriperfotmance
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Landing page para uma nutricionista esportiva.
+                </p>
+
+                <a
+                  href="https://nutri-performance-lp.vercel.app/"
+                  target="_blank"
+                  class="proj"
+                >
+                  Ver Detalhes
+                </a>
+              </div>
+            </div>
+
+            <!-- Projeto 4 -->
+            <div
+              class="bg-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 project-card"
+              data-category="desktop"
+            >
+              <img
+                src="./assets/img/Advogados-Recomendados.jpg"
+                alt="Projeto 4"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Advogados Recomendados
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Landing page para uma agência de marketing jurídico.
+                </p>
+
+                <a
+                  href="https://advogadosrecomendados.com/"
+                  target="_blank"
+                  class="proj"
+                >
+                  Ver Detalhes
+                </a>
+              </div>
+            </div>
+
+            <!-- Projeto 5 -->
+            <div
+              class="bg-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 project-card"
+              data-category="desktop"
+            >
+              <img
+                src="./assets/img/FukasseEGuerra.jpg"
+                alt="Projeto 5"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Fukasse & Guerra
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Landing page para um escritório de advocacia.
+                </p>
+
+                <a
+                  href="https://fukasseguerra.com.br/"
+                  target="_blank"
+                  class="proj"
+                >
+                  Ver Detalhes
+                </a>
+              </div>
+            </div>
+
+            <!-- Adicione mais projetos conforme necessário -->
+          </div>
+
+          <!-- Botões de navegação -->
+          <button
+            class="carousel-nav prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            class="carousel-nav next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Botão "Ver Mais Projetos" -->
+        <div class="text-center mt-12">
+          <a href="#" class="btn"> Ver Mais Projetos </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tecnologies Section -->
+    <section id="tecnologias" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Tecnologias Dominadas
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Meu conjunto de habilidades abrange uma ampla gama de tecnologias
+            modernas, permitindo-me criar soluções robustas e eficientes.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Design -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Design</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                  alt="Figma"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700">Figma</span>
+                <div class="ml-auto bg-blue-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-blue-400 h-2 rounded-full w-[95%] loading-bar"
+                  ></div>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg"
+                  alt="Canvas"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700">Canvas</span>
+                <div class="ml-auto bg-blue-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-blue-400 h-2 rounded-full loading-bar"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Web -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Web</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg"
+                  alt="Wordpress"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700">Wordpress</span>
+                <div class="ml-auto bg-green-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-green-400 h-2 rounded-full loading-bar"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </li>
+
+              <li class="flex items-center">
+                <img
+                  src="./assets/icons/navegador.svg"
+                  alt="Node.js"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700">HTML/CSS/JS</span>
+                <div class="ml-auto bg-green-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-green-400 h-2 rounded-full loading-bar"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </li>
+
+              <li class="flex items-center">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                  alt="Node.js"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700">React</span>
+                <div class="ml-auto bg-green-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-green-400 h-2 rounded-full loading-bar"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Automações -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Automações
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <img
+                  src="./assets/icons/n8n.svg"
+                  alt="MySQL"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700"> n8n </span>
+                <div class="ml-auto bg-yellow-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-yellow-400 h-2 rounded-full loading-bar"
+                    style="width: 92%"
+                  ></div>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <img
+                  src="./assets/icons/Make.svg"
+                  alt="PostgreSQL"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700"> Make </span>
+                <div class="ml-auto bg-yellow-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-yellow-400 h-2 rounded-full loading-bar"
+                    style="width: 88%"
+                  ></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ChatBots -->
+          <div class="bg-gray-50 rounded-lg p-6 shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">ChatBots</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <img
+                  src="./assets/icons/Botconversa.svg"
+                  alt="Git"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700">Botconversa</span>
+                <div class="ml-auto bg-purple-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-purple-400 h-2 rounded-full loading-bar"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <img
+                  src="./assets/icons/Weni.svg"
+                  alt="Docker"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700">Weni</span>
+                <div class="ml-auto bg-purple-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-purple-400 h-2 rounded-full loading-bar"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <img
+                  src="./assets/icons/ManyChat.svg"
+                  alt="AWS"
+                  class="w-6 h-6 mr-2"
+                />
+                <span class="text-gray-700">ManyChat</span>
+                <div class="ml-auto bg-purple-600 h-2 rounded-full w-20">
+                  <div
+                    class="bg-purple-400 h-2 rounded-full loading-bar"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-16">
+          <a href="#contato" class="btn"> Solicitar um orcamento </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Logo e Descrição -->
+          <div class="mb-8 md:mb-0">
+            <a href="#">
+              <img src="./assets/img/Logo-2.png" alt="Logo" class="h-14 mb-4" />
+            </a>
+            <p class="text-gray-400 text-sm">
+              Desenvolvendo soluções inovadoras e impactantes para transformar
+              ideias em realidade digital.
+            </p>
+          </div>
+
+          <!-- Links de Navegação -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Navegação</h3>
+            <ul class="space-y-2">
+              <li>
+                <i class="ph-fill ph-circle me-2 text-xs"></i>
+                <a
+                  href="#contato"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <i class="ph-fill ph-circle me-2 text-xs"></i>
+                <a
+                  href="#sobre"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <i class="ph-fill ph-circle me-2 text-xs"></i>
+                <a
+                  href="#servicos"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Serviços</a
+                >
+              </li>
+              <li>
+                <i class="ph-fill ph-circle me-2 text-xs"></i>
+                <a
+                  href="#projetos"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Projetos
+                </a>
+              </li>
+              <li>
+                <i class="ph-fill ph-circle me-2 text-xs"></i>
+                <a
+                  href="#tecnologias"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                >
+                  Tecnologias
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Informações de Contato -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Contato</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="ph-bold ph-phone me-2"></i>
+                <a
+                  href="tel:(27) 9 9578-4744"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                >
+                  (27) 9 9578-4744
+                </a>
+              </li>
+              <li class="flex items-center">
+                <i class="ph-bold ph-envelope-simple me-2"></i>
+                <a
+                  href="mailto:dario.bastos.dev@gmail.com"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                >
+                  dario.bastos.dev@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Redes Sociais -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 text-white">Redes Sociais</h3>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.instagram.com/odariodev/"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="ph-fill ph-instagram-logo text-3xl"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/d%C3%A1rio-bastos-6a4b6726b/"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="ph-fill ph-linkedin-logo text-3xl"></i>
+              </a>
+              <a
+                href="https://github.com/dario-bastos-dev"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="ph-fill ph-github-logo text-3xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+          <p class="text-gray-400 text-sm">
+            2025&copy; Dário Bastos. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="./js/script.js"></script>
+  </body>
 </html>
