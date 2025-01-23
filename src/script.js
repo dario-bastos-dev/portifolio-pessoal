@@ -1,45 +1,48 @@
-// Toggle mobile menu
-const btn = document.querySelector("button.mobile-menu-button");
-const menu = document.querySelector(".mobile-menu");
+import './css/styles.css';
+import '../dist/output.css';
 
-btn.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
+// Toggle mobile menu
+const btn = document.querySelector('button.mobile-menu-button');
+const menu = document.querySelector('.mobile-menu');
+
+btn.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
 });
 
 // Select type project
-const buttons = document.querySelectorAll("button.filter");
+const buttons = document.querySelectorAll('button.filter');
 
 buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener('click', () => {
     buttons.forEach((btn) => {
-      btn.classList.remove("active");
-      btn.classList.add("inactive");
+      btn.classList.remove('active');
+      btn.classList.add('inactive');
     });
 
-    btn.classList.remove("inactive");
-    btn.classList.add("active");
+    btn.classList.remove('inactive');
+    btn.classList.add('active');
   });
 });
 
 // Scroll animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add("animate-loading-bar");
-    else entry.target.classList.remove("animate-loading-bar");
+    if (entry.isIntersecting) entry.target.classList.add('animate-loading-bar');
+    else entry.target.classList.remove('animate-loading-bar');
   });
 });
 
-const bars = document.querySelectorAll("div.loading-bar");
+const bars = document.querySelectorAll('div.loading-bar');
 
 bars.forEach((bar) => observer.observe(bar));
 
 // Carousel
 class ProjectCarousel {
   constructor() {
-    this.carousel = document.querySelector(".projects-carousel");
+    this.carousel = document.querySelector('.projects-carousel');
     this.projects = Array.from(this.carousel.children);
-    this.prevBtn = document.querySelector(".carousel-nav.prev");
-    this.nextBtn = document.querySelector(".carousel-nav.next");
+    this.prevBtn = document.querySelector('.carousel-nav.prev');
+    this.nextBtn = document.querySelector('.carousel-nav.next');
     this.currentIndex = 0;
     this.projectsPerView = 1;
     this.totalProjects = this.projects.length;
@@ -64,12 +67,12 @@ class ProjectCarousel {
       .map((node) => node.cloneNode(true));
 
     firstClones.forEach((clone) => {
-      clone.setAttribute("aria-hidden", "true");
+      clone.setAttribute('aria-hidden', 'true');
       this.carousel.appendChild(clone);
     });
 
     lastClones.reverse().forEach((clone) => {
-      clone.setAttribute("aria-hidden", "true");
+      clone.setAttribute('aria-hidden', 'true');
       this.carousel.insertBefore(clone, this.carousel.firstChild);
     });
 
@@ -89,20 +92,20 @@ class ProjectCarousel {
   }
 
   setupEventListeners() {
-    this.prevBtn.addEventListener("click", () => this.navigate("prev"));
-    this.nextBtn.addEventListener("click", () => this.navigate("next"));
-    window.addEventListener("resize", () => {
+    this.prevBtn.addEventListener('click', () => this.navigate('prev'));
+    this.nextBtn.addEventListener('click', () => this.navigate('next'));
+    window.addEventListener('resize', () => {
       this.updateProjectsPerView();
       this.updateCarousel();
     });
 
-    this.carousel.addEventListener("transitionend", () =>
+    this.carousel.addEventListener('transitionend', () =>
       this.handleTransitionEnd()
     );
   }
 
   navigate(direction) {
-    if (direction === "next") {
+    if (direction === 'next') {
       this.currentIndex++;
     } else {
       this.currentIndex--;
@@ -113,8 +116,8 @@ class ProjectCarousel {
   updateCarousel(smooth = true) {
     const offset = (this.currentIndex * -108) / this.projectsPerView;
     this.carousel.style.transition = smooth
-      ? "transform 0.5s ease-in-out"
-      : "none";
+      ? 'transform 0.5s ease-in-out'
+      : 'none';
     this.carousel.style.transform = `translateX(${offset}%)`;
   }
 
@@ -131,10 +134,10 @@ class ProjectCarousel {
 
   filterProjects(category) {
     this.projects.forEach((project) => {
-      if (category === "all" || project.dataset.category === category) {
-        project.style.display = "";
+      if (category === 'all' || project.dataset.category === category) {
+        project.style.display = '';
       } else {
-        project.style.display = "none";
+        project.style.display = 'none';
       }
     });
 
@@ -144,16 +147,16 @@ class ProjectCarousel {
 }
 
 // Inicialize o carrossel quando o DOM estiver pronto
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const carousel = new ProjectCarousel();
 
   // Adicione funcionalidade aos botões de filtro
-  document.querySelectorAll(".filter-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+  document.querySelectorAll('.filter-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
       document
-        .querySelectorAll(".filter-btn")
-        .forEach((b) => b.classList.remove("active"));
-      e.target.classList.add("active");
+        .querySelectorAll('.filter-btn')
+        .forEach((b) => b.classList.remove('active'));
+      e.target.classList.add('active');
       carousel.filterProjects(e.target.dataset.filter);
     });
   });
